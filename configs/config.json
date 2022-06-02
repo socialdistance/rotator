@@ -1,0 +1,26 @@
+{
+  "logger": {
+    "level": "debug",
+    "encoding": "json",
+    "outputPaths": ["stdout", "./logs/logs.json"],
+    "errorOutputPaths": ["stdout"],
+    "encoderConfig": {
+      "messageKey": "message",
+      "levelKey": "level",
+      "levelEncoder": "lowercase"
+    }
+  },
+  "storage": {
+    "type": "sql",
+    "dsn": "postgres://postgres:postgres@localhost:54321/rotator?sslmode=disable"
+  },
+  "http": {
+    "host": "127.0.0.1",
+    "port": "8080"
+  },
+  "rabbit": {
+    "url": "amqp://guest:guest@localhost:5672/",
+    "queue": "rotator_queue",
+    "exchange": "rotator"
+  }
+}

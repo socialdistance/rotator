@@ -1,0 +1,2 @@
+CREATE DATABASE rotator;
+GRANT ALL PRIVILEGES ON DATABASE rotator to postgres;
